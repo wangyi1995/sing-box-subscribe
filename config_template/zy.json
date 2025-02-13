@@ -227,6 +227,18 @@
       ]
     },
     {
+      "tag":"Emby",
+      "type":"selector",
+      "outbounds":[
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
       "tag":"Apple",
       "type":"selector",
       "outbounds":[
@@ -479,6 +491,10 @@
         "outbound": "Disney+"
       },
       {
+        "rule_set": "geosite-emby",
+        "outbound": "Emby"
+      },
+      {
         "rule_set": ["geoip-apple", "geosite-apple", "geosite-amazon"],
         "outbound": "Apple"
       },
@@ -635,6 +651,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-emby",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/embedly.srs",
         "download_detour": "direct"
       },
       {
