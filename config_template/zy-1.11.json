@@ -175,6 +175,18 @@
         ]
       },
       {
+        "tag":"Instagram",
+        "type":"selector",
+        "outbounds":[
+          "HongKong",
+          "TaiWan",
+          "Singapore",
+          "Japan",
+          "America",
+          "Others"
+        ]
+      },
+      {
         "tag":"Facebook",
         "type":"selector",
         "outbounds":[
@@ -483,6 +495,10 @@
           "outbound": "Twitter"
         },
         {
+          "rule_set": "geosite-instagram",
+          "outbound": "Instagram"
+        },
+        {
           "rule_set":["geoip-facebook", "geosite-facebook"],
           "outbound": "Facebook"
         },
@@ -608,6 +624,13 @@
           "type": "remote",
           "format": "binary",
           "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/twitter.srs",
+          "download_detour": "direct"
+        },
+        {
+          "tag": "geosite-instagram",
+          "type": "remote",
+          "format": "binary",
+          "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/instagram.srs",
           "download_detour": "direct"
         },
         {
