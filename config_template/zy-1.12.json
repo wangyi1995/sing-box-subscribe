@@ -139,6 +139,18 @@
       ]
     },
     {
+      "tag": "Instagram",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
       "tag": "Facebook",
       "type": "selector",
       "outbounds": [
@@ -206,6 +218,18 @@
     },
     {
       "tag": "Disney+",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Emby",
       "type": "selector",
       "outbounds": [
         "HongKong",
@@ -489,6 +513,10 @@
         "outbound": "Twitter"
       },
       {
+        "rule_set": "geosite-instagram",
+        "outbound": "Instagram"
+      },
+      {
         "rule_set": [
           "geoip-facebook",
           "geosite-facebook"
@@ -521,6 +549,10 @@
       {
         "rule_set": "geosite-disney",
         "outbound": "Disney+"
+      },
+      {
+        "rule_set": "geosite-emby",
+        "outbound": "Emby"
       },
       {
         "rule_set": [
@@ -632,6 +664,13 @@
         "download_detour": "direct"
       },
       {
+        "tag": "geosite-instagram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/instagram.srs",
+        "download_detour": "direct"
+      },
+      {
         "tag": "geoip-facebook",
         "type": "remote",
         "format": "binary",
@@ -692,6 +731,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-emby",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://ghproxy.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/embedly.srs",
         "download_detour": "direct"
       },
       {
